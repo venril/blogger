@@ -9,3 +9,11 @@ $d = new Demo() ;
 $z = new Test();
 
 
+$tmpl = new Aston\View\Template('home.phtml');
+$tmpl->render();
+
+ob_start();
+
+echo 'test';
+
+$content = ob_get_clean();

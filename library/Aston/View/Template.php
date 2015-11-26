@@ -23,7 +23,10 @@ class Template {
 
     public function render()
     {
+        ob_start();
         include $this->filename;
+        $content = ob_get_clean();
+        return $content;
     }
     
 
